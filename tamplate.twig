@@ -1,0 +1,12 @@
+{% set shopInfo = ObjectApi.getShopInfo() %}
+{% set underline = moduleConfig.underlineHeader == 1 %}
+ 
+ 
+ 
+ 
+ <{{ moduleConfig.levelHeader}}
+ class="header header_{{ moduleConfig.levelHeader }} {% if underline %} header_underline {% endif %}">
+  <span {% if underline %} class="header_highlight" {% endif %}>
+        {{ moduleConfig.textHeader }}
+    </span>
+ </{{ moduleConfig.levelHeader}}>

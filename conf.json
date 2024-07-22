@@ -1,0 +1,137 @@
+[
+    {
+        "label": "General settings",
+        "state": "unfolded",
+        "elements": [
+            {
+                "name": "infobox",
+                "type": "infobox",
+                "options": {
+                    "type": "blank",
+                    "message": "#### Related settings in the admin panel%s- setting the [shop name](%s) and default [phone number and e-mail address](%s)",
+                    "placeholderValues": [
+                        "\n",
+                        "\/admin\/config",
+                        "\/admin\/config\/company"
+                    ]
+                }
+            },
+            {
+                "name": "showHeader",
+                "type": "checkbox",
+                "label": "Display module header",
+                "supportsTranslations": true,
+                "defaultValue": 0,
+                "children": [
+                    {
+                        "name": "textHeader",
+                        "type": "text",
+                        "relations": [
+                            {
+                                "parentName": "showHeader",
+                                "parentValueToActionsMap": [
+                                    {
+                                        "value": 0,
+                                        "actions": [
+                                            "setHiddenAndOptional",
+                                            "setDisabled"
+                                        ]
+                                    },
+                                    {
+                                        "value": 1,
+                                        "actions": [
+                                            "setVisibleAndRequired",
+                                            "setAvailable"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "label": "Content of the module header.",
+                        "supportsTranslations": true
+                    },
+                    {
+                        "name": "levelHeader",
+                        "type": "select",
+                        "hint": "The numbers 2 to 6 indicate the hierarchy of headings, with H2 being the most important and H6 being the least. Module titles are H2 headers. H1 is reserved for the page title. If you need to add a page title, use the \"Page title\" module.",
+                        "relations": [
+                            {
+                                "parentName": "showHeader",
+                                "parentValueToActionsMap": [
+                                    {
+                                        "value": 0,
+                                        "actions": [
+                                            "setHidden",
+                                            "setDisabled"
+                                        ]
+                                    },
+                                    {
+                                        "value": 1,
+                                        "actions": [
+                                            "setVisible",
+                                            "setAvailable"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "options": {
+                            "isWithSearch": 0,
+                            "selectOptions": [
+                                {
+                                    "key": "h2",
+                                    "label": "H2"
+                                },
+                                {
+                                    "key": "h3",
+                                    "label": "H3"
+                                },
+                                {
+                                    "key": "h4",
+                                    "label": "H4"
+                                },
+                                {
+                                    "key": "h5",
+                                    "label": "H5"
+                                },
+                                {
+                                    "key": "h6",
+                                    "label": "H6"
+                                }
+                            ]
+                        },
+                        "label": "Heading level",
+                        "defaultValue": "h2"
+                    },
+                    {
+                        "name": "underlineHeader",
+                        "type": "checkbox",
+                        "relations": [
+                            {
+                                "parentName": "showHeader",
+                                "parentValueToActionsMap": [
+                                    {
+                                        "value": 0,
+                                        "actions": [
+                                            "setHidden",
+                                            "setDisabled"
+                                        ]
+                                    },
+                                    {
+                                        "value": 1,
+                                        "actions": [
+                                            "setVisible",
+                                            "setAvailable"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "label": "Add underline below the heading",
+                        "defaultValue": 0
+                    }
+                ]
+            }
+        ]
+    }
+]
