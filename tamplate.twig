@@ -1,14 +1,4 @@
-{% from "@macros/image.twig" import image %}
-
-{% set shopInfo = ObjectApi.getShopInfo() %}
-{% set shopUrls = ObjectApi.getShopUrls() %}
-{% set underline = moduleConfig.underlineHeader == 1 %}
-
- 
- 
- {# Nagłówek #}
- 
- <{{ moduleConfig.levelHeader}}
+<{{ moduleConfig.levelHeader}}
  class="header header_{{ moduleConfig.levelHeader }} {% if underline %} header_underline {% endif %}">
 
     <span {% if underline %} class="header_highlight" {% endif %}>
@@ -51,4 +41,6 @@
         <h5>{{ shopInfo.name }}</h5>
     {% endif %}
 {% endif %}
+
+{# Telefon i godziny #}
 

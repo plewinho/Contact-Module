@@ -232,7 +232,112 @@
                     ]
                 },
                 "label": "Graphic logo"
-            }
+            },
+
+            {
+                "name": "showPhone",
+                "type": "checkbox",
+                "label": "View phone number",
+                "supportsTranslations": true,
+                "defaultValue": 0,
+                "children": [
+                    {
+                        "name": "phone",
+                        "type": "text",
+                        "relations": [
+                            {
+                                "parentName": "showPhone",
+                                "parentValueToActionsMap": [
+                                    {
+                                        "value": 0,
+                                        "actions": [
+                                            "setHidden",
+                                            "setDisabled"
+                                        ]
+                                    },
+                                    {
+                                        "value": 1,
+                                        "actions": [
+                                            "setVisible",
+                                            "setAvailable"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "label": "Phone number",
+                        "labelDescription": "Leave blank to display (shop_phone)",
+                        "supportsTranslations": true
+                    },
+                    {
+                        "name":"workingHours",
+                        "type":"text",
+                        "label":"Helpline working hours",
+                        "supportsTranslations":true,
+                        "relations":[
+                            {
+                                "parentName":"showPhone",
+                                "parentValueToActionsMap":[
+                                    {
+                                        "value":0,
+                                        "actions":[
+                                            "setHidden",
+                                            "setDisabled"
+                                        ]
+                                    },
+                                    {
+                                        "value":1,
+                                        "actions":[
+                                            "setVisible",
+                                            "setAvailable"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    } ] },
+
+                    {
+                        "type":"checkbox",
+                        "name":"showEmail",
+                        "label":"View e-mail address",
+                        "supportsTranslations":true,
+                        "defaultValue":0,
+                        "children":[
+                            {
+                                "type":"text",
+                                "name":"email",
+                                "label":"E-mail address",
+                                "labelDescription":"Leave blank to display (shop_email)",
+                                "supportsTranslations":true,
+                                "relations":[
+                                    {
+                                        "parentName":"showEmail",
+                                        "parentValueToActionsMap":[
+                                            {
+                                                "value":0,
+                                                "actions":[
+                                                    "setHidden",
+                                                    "setDisabled"
+                                                ]
+                                            },
+                                            {
+                                                "value":1,
+                                                "actions":[
+                                                    "setVisible",
+                                                    "setAvailable"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+
+
+                        ]
+
+                    }
+
         ]
     }
 ]
