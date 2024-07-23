@@ -131,7 +131,102 @@
                         "defaultValue": 0
                     }
                 ]
-            }
+            },
+            {
+                "type": "radio",
+                "name": "showLogo",
+                "label": "Company logo",
+                "defaultValue": "none",
+                "options": {
+                    "radioOptions": [
+                        {
+                            "key": "text",
+                            "label": "Text logo"
+                           
+                        },
+                        {
+                            "key": "image",
+                            "label":"Image logo"
+                        },
+                        {
+                            "key": "none",
+                            "label": "No logo"
+                        }
+                    ]
+                }
+               
+            },
+            {
+                "type":"text",
+                "name":"textLogoInput",
+                "label":"Text logo",
+                "labelDescription":"Leave blank to display the store name.",
+                "relations": [
+                    {
+                        "parentName": "showLogo",
+                        "parentValueToActionsMap": [
+                            {
+                                "value": "text",
+                                "actions": [
+                                    "setVisible",
+                                    "setAvailable"
+                                ]
+                            },
+                            {
+                                "value": "image",
+                                "actions": [
+                                    "setHidden",
+                                    "setDisabled"
+                                ]
+                            },
+                            {
+                                "value": "none",
+                                "actions": [
+                                    "setHidden",
+                                    "setDisabled"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type":"imageUpload",
+                "name": "image",
+                "label" : "Graphic logo",
+                    "options": {
+                    "requireImageSize" : true,
+                    "allowedExtensions" : ["webp", "svg", "jpeg", "jpg", "png", "gif"]},
+                "relations": [
+                    {
+                        "parentName": "showLogo",
+                        "parentValueToActionsMap": [
+                            {
+                                "value": "text",
+                                "actions": [
+                                    "setHidden",
+                                    "setDisabled"
+                                ]
+                            },
+                            {
+                                "value": "image",
+                                "actions": [
+                                    "setVisible",
+                                    "setAvailable"
+                                ]
+                            },
+                            {
+                                "value": "none",
+                                "actions": [
+                                    "setHidden",
+                                    "setDisabled"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+                }
+
         ]
     }
 ]
