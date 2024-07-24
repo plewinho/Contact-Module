@@ -151,7 +151,7 @@
                         }
                     ]
                 },
-                "label": "Company logo",
+                "label": "Company logo:",
                 "supportsTranslations": true,
                 "defaultValue": "none"
             },

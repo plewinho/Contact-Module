@@ -48,7 +48,7 @@
         </figure>
         
         
-    {% elseif moduleConfig.textLogoInput %}
+    {% elseif moduleConfig.textLogoInput and moduleConfig.showLogo != 'image'%}
     <h5 class="header header_h5">
     	{{ moduleConfig.textLogoInput }}
     </h5>
@@ -66,10 +66,12 @@
 <p>
 {% if moduleConfig.phone %}
 {{ icon('icon-phone',{
-size: 'm'
+size: 's'
 })}}{{ moduleConfig.phone}}
 {% else %}
-{{ icon('icon-phone')}} shop_phone 
+{{ icon('icon-phone',{
+size: 's'
+})}} shop_phone 
 {% endif %}
 </p>
 
@@ -88,9 +90,13 @@ noStroke: true})}}{{ moduleConfig.workingHours }}
 {% if moduleConfig.showEmail == 1 %}
 <p> 
 {% if moduleConfig.email %}
-{{ icon('icon-mail')}}{{ moduleConfig.email}}
+{{ icon('icon-mail',{
+size: 's'
+})}}{{ moduleConfig.email}}
 {% else %}
-{{ icon('icon-mail')}} shop_email 
+{{ icon('icon-mail',{
+size: 's'
+})}} shop_email 
 {% endif %}
 </p>
 {% endif %}
