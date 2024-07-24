@@ -1,4 +1,16 @@
-<{{ moduleConfig.levelHeader}}
+{% from "@macros/image.twig" import image %}
+{% from "@macros/icon.twig" import icon %}
+
+
+{% set shopInfo = ObjectApi.getShopInfo() %}
+{% set shopUrls = ObjectApi.getShopUrls() %}
+{% set underline = moduleConfig.underlineHeader == 1 %}
+
+ 
+ 
+ {# Nagłówek #}
+ 
+ <{{ moduleConfig.levelHeader}}
  class="header header_{{ moduleConfig.levelHeader }} {% if underline %} header_underline {% endif %}">
 
     <span {% if underline %} class="header_highlight" {% endif %}>
@@ -6,7 +18,6 @@
     </span>
     
  </{{ moduleConfig.levelHeader}}>
- 
  
  {# Logo #}
  
@@ -35,12 +46,51 @@
                 )}}
             </a>
         </figure>
+        
+        
     {% elseif moduleConfig.textLogoInput %}
-        <h5> {{ moduleConfig.textLogoInput }} </h5>
-    {% else %}
-        <h5>{{ shopInfo.name }}</h5>
-    {% endif %}
+    <h5 class="header header_h5">
+    	{{ moduleConfig.textLogoInput }}
+    </h5>
+   	 	{% else %}
+    <h5 class="header header_h5">
+    	{{ shopInfo.name }}
+    </h5>
+{% endif %}
 {% endif %}
 
 {# Telefon i godziny #}
 
+{% if moduleConfig.showPhone == 1 %}
+<div class="contact">
+<p>
+{% if moduleConfig.phone %}
+{{ icon('icon-phone',{
+size: 'm'
+})}}{{ moduleConfig.phone}}
+{% else %}
+{{ icon('icon-phone')}} shop_phone 
+{% endif %}
+</p>
+
+<p>
+{% if moduleConfig.workingHours %}
+{{ icon('icon-phone',{
+noStroke: true})}}{{ moduleConfig.workingHours }}
+{% endif %}
+</p>
+</div>
+{% endif %}
+
+
+{# E-mail #}
+
+{% if moduleConfig.showEmail == 1 %}
+<p> 
+{% if moduleConfig.email %}
+{{ icon('icon-mail')}}{{ moduleConfig.email}}
+{% else %}
+{{ icon('icon-mail')}} shop_email 
+{% endif %}
+</p>
+{% endif %}

@@ -233,7 +233,6 @@
                 },
                 "label": "Graphic logo"
             },
-
             {
                 "name": "showPhone",
                 "type": "checkbox",
@@ -270,74 +269,71 @@
                         "supportsTranslations": true
                     },
                     {
-                        "name":"workingHours",
-                        "type":"text",
-                        "label":"Helpline working hours",
-                        "supportsTranslations":true,
-                        "relations":[
+                        "name": "workingHours",
+                        "type": "text",
+                        "relations": [
                             {
-                                "parentName":"showPhone",
-                                "parentValueToActionsMap":[
+                                "parentName": "showPhone",
+                                "parentValueToActionsMap": [
                                     {
-                                        "value":0,
-                                        "actions":[
+                                        "value": 0,
+                                        "actions": [
                                             "setHidden",
                                             "setDisabled"
                                         ]
                                     },
                                     {
-                                        "value":1,
-                                        "actions":[
+                                        "value": 1,
+                                        "actions": [
                                             "setVisible",
                                             "setAvailable"
                                         ]
                                     }
                                 ]
                             }
-                        ]
-                    } ] },
-
+                        ],
+                        "label": "Helpline working hours",
+                        "supportsTranslations": true
+                    }
+                ]
+            },
+            {
+                "name": "showEmail",
+                "type": "checkbox",
+                "label": "View e-mail address",
+                "supportsTranslations": true,
+                "defaultValue": 0,
+                "children": [
                     {
-                        "type":"checkbox",
-                        "name":"showEmail",
-                        "label":"View e-mail address",
-                        "supportsTranslations":true,
-                        "defaultValue":0,
-                        "children":[
+                        "name": "email",
+                        "type": "text",
+                        "relations": [
                             {
-                                "type":"text",
-                                "name":"email",
-                                "label":"E-mail address",
-                                "labelDescription":"Leave blank to display (shop_email)",
-                                "supportsTranslations":true,
-                                "relations":[
+                                "parentName": "showEmail",
+                                "parentValueToActionsMap": [
                                     {
-                                        "parentName":"showEmail",
-                                        "parentValueToActionsMap":[
-                                            {
-                                                "value":0,
-                                                "actions":[
-                                                    "setHidden",
-                                                    "setDisabled"
-                                                ]
-                                            },
-                                            {
-                                                "value":1,
-                                                "actions":[
-                                                    "setVisible",
-                                                    "setAvailable"
-                                                ]
-                                            }
+                                        "value": 0,
+                                        "actions": [
+                                            "setHidden",
+                                            "setDisabled"
+                                        ]
+                                    },
+                                    {
+                                        "value": 1,
+                                        "actions": [
+                                            "setVisible",
+                                            "setAvailable"
                                         ]
                                     }
                                 ]
                             }
-
-
-                        ]
-
+                        ],
+                        "label": "E-mail address",
+                        "labelDescription": "Leave blank to display (shop_email)",
+                        "supportsTranslations": true
                     }
-
+                ]
+            }
         ]
     }
 ]
