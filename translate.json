@@ -1,25 +1,26 @@
 {
-    "schema": {
-        "pl_PL": {
-        	"#### Related settings in the admin panel%s- setting the [shop name](%s) and default [phone number and e-mail address](%s)": "#### Powiązane ustawienia w panelu administracyjnym%s- ustawienie [nazwy sklepu](%s) oraz domyślnego [numeru telefonu i adresu e-mail](%s)",
-            "General settings": "Ustawienia ogólne",
-            "Display module header": "Wyświetl nagłówek modułu",
-            "Content of the module header.": "Treść nagłówka modułu.",
-            "Heading level": "Poziom nagłówka",
-            "Add underline below the heading": "Dodaj podkreślenie pod nagłówkiem",
-            "Company logo:": "Logo firmy:",
-            "Text logo": "tekstowe",
-            "Image logo": "graficzne",
-            "No logo": "brak",
-            "Leave blank to display the store name.": "Pozostaw puste, aby wyświetlić nazwę sklepu.",
-            "Graphic logo": "Graficzne logo",
-            "View phone number": "Wyświetl numer telefonu",
-            "Phone number": "Numer telefonu",
-            "Leave blank to display (shop_phone)": "Pozostaw puste, aby wyświetlić (shop_phone)",
-            "Helpline working hours": "Godziny pracy infolinii",
-            "View e-mail address": "Wyświetl adres e-mail",
-            "E-mail address": "Adres e-mail",
-            "Leave blank to display (shop_email)": "Pozostaw puste, aby wyświetlić (shop_email)"        
+  "schema": {
+    "pl_PL": {
+      "#### Related settings in the admin panel%s- setting the [shop name](%s) and default [phone number and e-mail address](%s)":
+      "#### Powiązane ustawienia w panelu administracyjnym%s- ustawienie [nazwy sklepu](%s) oraz domyślnego [numeru telefonu i adresu e-mail](%s)",
+      "General settings": "Ustawienia ogólne",
+      "Display module header": "Wyświetl nagłówek modułu",
+      "Content of the module header.": "Treść nagłówka modułu.",
+      "Heading level": "Poziom nagłówka",
+      "Add underline below the heading": "Dodaj podkreślenie pod nagłówkiem",
+      "Company logo:": "Logo firmy:",
+      "Text logo": "tekstowe",
+      "Image logo": "graficzne",
+      "No logo": "brak",
+      "Leave blank to display the store name.": "Pozostaw puste, aby wyświetlić nazwę sklepu.",
+      "Graphic logo": "Graficzne logo",
+      "View phone number": "Wyświetl numer telefonu",
+      "Phone number": "Numer telefonu",
+      "Leave blank to display (shop_phone)": "Pozostaw puste, aby wyświetlić (shop_phone)",
+      "Helpline working hours": "Godziny pracy infolinii",
+      "View e-mail address": "Wyświetl adres e-mail",
+      "E-mail address": "Adres e-mail",
+      "Leave blank to display (shop_email)": "Pozostaw puste, aby wyświetlić (shop_email)"
     }
-    }
+  }
 }
