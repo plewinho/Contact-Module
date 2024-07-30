@@ -1,7 +1,6 @@
 {% from "@macros/image.twig" import image %}
 {% from "@macros/icon.twig" import icon %}
 
-
 {% set shopInfo = ObjectApi.getShopInfo() %}
 {% set shopUrls = ObjectApi.getShopUrls() %}
 {% set underline = moduleConfig.underlineHeader == 1 %}
@@ -50,7 +49,7 @@
     </a>
 </figure>
 
-
+<div>
 {% elseif moduleConfig.textLogoInput and moduleConfig.showLogo != 'image'%}
 <h5 class="header header_h5">
     {{ moduleConfig.textLogoInput }}
@@ -103,3 +102,4 @@
     {% endif %}
 </p>
 {% endif %}
+</div>
